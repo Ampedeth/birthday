@@ -80,19 +80,19 @@ body {
     /* Adjusting the photo timeline */
   .photo-timeline {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping to a new line */
+    flex-wrap: wrap; 
     justify-content: center;
     margin-top: 20px;
-    width: 90%; /* Increase the width of the container */
-    gap: 20px; /* Add more space between photos */
-    padding: 20px; /* Add some padding around the container */
+    width: 90%; 
+    gap: 20px; 
+    padding: 20px; 
   }
 
   /* Adjusting the images */
   .photo-timeline img {
-    width: 150px;  /* Adjust the size of the images */
+    width: 150px;  
     height: 200px;
-    margin: 0 15px; /* Increase space between images */
+    margin: 0 15px;
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -125,7 +125,7 @@ body {
       position: absolute;
       width: 50px;
       height: 50px;
-      background: url(./star2.png) no-repeat center center;
+      background: url(/img/star2.png) no-repeat center center;
       background-size: contain;
       z-index: 5;
   }
