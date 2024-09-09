@@ -43,14 +43,17 @@ body {
   
   .envelope.front {
     background: linear-gradient(145deg, #ffd6d6, #ffe7e7);
+    display: flex;
   }
   
   .envelope.back {
     background: linear-gradient(145deg, #ffe7e7, #ffd6d6);
+    display: none;
   }
   
   /* Birthday card styles */
   .birthday-card {
+    display: none;
     background-color: #fff;
     border: 5px solid #ff69b4;
     width: 80%;
@@ -74,16 +77,22 @@ body {
     margin-bottom: 20px;
   }
   
+    /* Adjusting the photo timeline */
   .photo-timeline {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping to a new line */
     justify-content: center;
     margin-top: 20px;
+    width: 90%; /* Increase the width of the container */
+    gap: 20px; /* Add more space between photos */
+    padding: 20px; /* Add some padding around the container */
   }
-  
+
+  /* Adjusting the images */
   .photo-timeline img {
-    width: 100px;
-    height: 100px;
-    margin: 0 10px;
+    width: 150px;  /* Adjust the size of the images */
+    height: 200px;
+    margin: 0 15px; /* Increase space between images */
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -111,25 +120,25 @@ body {
     color: #333;
   }
   
-/* Star Decorations */
-.star-element {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: url(./star2.png) no-repeat center center;
-    background-size: contain;
-    z-index: 5;
-}
-  
-.star-1 {
-    top: 10px;
-    left: 30px;
-}
-  
-.star-2 {
-    top: 50px;
-    right: 60px;
-}
+  /* Star Decorations */
+  .star-element {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: url(./star2.png) no-repeat center center;
+      background-size: contain;
+      z-index: 5;
+  }
+    
+  .star-1 {
+      top: 30px;
+      left: 40px;
+  }
+    
+  .star-2 {
+      top: 50px;
+      right: 60px;
+  }
 
 
   @keyframes fadeIn {
