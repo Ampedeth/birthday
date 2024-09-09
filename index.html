@@ -1,30 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
-    <title>Happy birthday</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Card</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- First Card: Front of the Envelope -->
+    <div class="envelope front">
+      <div class="envelope-content">
+        <h1>Happy Birthday!</h1>
+        <button onclick="nextCard(1)">Flip Card</button>
+      </div>
+    </div>
+  
+    <!-- Second Card: Back of the Envelope -->
+    <div class="envelope back hidden">
+      <div class="envelope-content">
+        <h1>Almost There!</h1>
+        <button onclick="nextCard(2)">Open Envelope</button>
+      </div>
+    </div>
+  
+    <!-- Third Card: Birthday Card Content -->
 
-    <!--Page wrapper-->
-    <main class="envelope">
-        <section class="front-envelope">
-            <div class="front-envelope-text--block">
-                <h2 class="front-envelope-text">Vera’s birthday card</h2>
-            </div>
-            
-            <form action="./envelope-back.html">
-                <div class="front-envelope-button--block">
-                    <button class="btn">Flip</button>
-                </div>
-            </form>
-            
-        </section>
-    </main>
+    <!-- Birthday card content -->
+  <div class="birthday-card hidden">
+    <h1 class="greeting">Happy Birthday "Name"</h1>
+    <div class="decorative-star">&#10024;</div>
+
+    <div class="photo-timeline">
+      <!-- Insert images here -->
+      <img src="image1.jpg" alt="Image 1">
+      <img src="image2.jpg" alt="Image 2">
+      <img src="image3.jpg" alt="Image 3">
+      <img src="image4.jpg" alt="Image 4">
+      <img src="image5.jpg" alt="Image 5">
+      <img src="image6.jpg" alt="Image 6">
+    </div>
+
+    <div class="timeline">
+      <span>June 2023</span>
+      <span>Nowadays</span>
+    </div>
+
+  </div>
+  
+   <!-- Decorative Elements -->
     
-    
-    <script href="./js/script.js"></script>
+   <div class="star-element star-1"><img src="/img/star1.png" alt=""></div>
+   <div class="star-element star-2"><img src="/img/star2.png" alt=""></div>
+
+
+  <script src="/js/script.js"></script>
 </body>
 </html>

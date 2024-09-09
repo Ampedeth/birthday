@@ -1,98 +1,144 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Pacifico', cursive;
-}
-
+/* General styles */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: rgb(245, 219, 236);
-    padding: 70px; 
-}
-
-.envelope {
-    max-width: 924px;
-    max-height: 524px;
-    width: 100%; 
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: 'Fredoka One', sans-serif;
+    background-color: #fceaff; /* Softer pink for a cheerful look */
     text-align: center;
-    border: 8px solid rgb(89, 89, 89);
-    border-radius: 24px;
-    background: #fff;
-    box-sizing: border-box;
-    overflow: hidden;
-    position: relative;
-}
-
-.btn {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  button {
+    background-color: #00c4cc;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
     cursor: pointer;
-    max-width: 146px;
-    max-height: 62px;
-    display: inline-block;
-    border-radius: 8px;
-    background: rgb(8, 151, 170);
-    padding: 12px 32px;
-    color: #fff;
-}
-
-.btn:hover{
-    background: #078799;
-}
-
-/*Envelope front*/
-
-
-.front-envelope-text--block { 
-    max-width: 772px;
-    max-height: 170px;
-    padding: 8px;
-    margin-bottom: 80px;
-    font-size: 64px;
-    font-weight: 400;
-    line-height: 90px;
-    letter-spacing: 0%;
-    color: rgb(233, 159, 172); 
-}
-
-
-
-
-/*Envelope back*/
-
-.back-envelope {
-    width: 100%;
-    height: 100%;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    font-family: 'Fredoka One', sans-serif;
+  }
+  
+  button:hover {
+    background-color: #00a1a7;
+  }
+  
+  /* Envelope Styles */
+  .envelope {
+    background-color: #ffffff;
+    border: 3px solid #444;
+    width: 350px;
+    height: 220px;
+    margin: 100px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .envelope.front {
+    background: linear-gradient(145deg, #ffd6d6, #ffe7e7);
+  }
+  
+  .envelope.back {
+    background: linear-gradient(145deg, #ffe7e7, #ffd6d6);
+  }
+  
+  /* Birthday card styles */
+  .birthday-card {
+    background-color: #fff;
+    border: 5px solid #ff69b4;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .birthday-card .greeting {
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    color: #ff6ec7;
+    margin-bottom: 20px;
+  }
+  
+  .decorative-star {
+    font-size: 30px;
+    color: #ff69b4;
+    margin-bottom: 20px;
+  }
+  
+  .photo-timeline {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .photo-timeline img {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .insert-good-times {
+    display: flex;
     align-items: center;
-    position: relative; 
-}
-
-.back-envelope-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.back-envelope-img {
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 3px dashed #ff69b4;
+    color: #ff69b4;
+    margin-left: 10px;
+    font-style: italic;
+    border-radius: 10px;
+  }
+  
+  .timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Fredoka One', sans-serif;
+    color: #333;
+  }
+  
+/* Star Decorations */
+.star-element {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-   
+    width: 50px;
+    height: 50px;
+    background: url(./star2.png) no-repeat center center;
+    background-size: contain;
+    z-index: 5;
+}
+  
+.star-1 {
+    top: 10px;
+    left: 30px;
+}
+  
+.star-2 {
+    top: 50px;
+    right: 60px;
 }
 
-.back-envelope-button--block{
-    position: absolute;
-    top: 50%;  
-    left: 50%; 
-    transform: translate(-50%, -50%);
-}
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
