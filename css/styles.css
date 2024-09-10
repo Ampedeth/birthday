@@ -93,7 +93,12 @@ body {
     width: 150px;  
     height: 200px;
     margin: 0 15px;
-    border-radius: 10px;
+    border-radius: 20px;
+    padding: 3px; 
+    background: linear-gradient(135deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+    border: 5px solid transparent; 
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
     object-fit: cover;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   }
@@ -132,7 +137,7 @@ body {
     
   .star-1 {
       top: 30px;
-      left: 40px;
+      left: 20px;
   }
     
   .star-2 {
@@ -151,3 +156,4 @@ body {
       transform: translateY(0);
     }
   }
+
